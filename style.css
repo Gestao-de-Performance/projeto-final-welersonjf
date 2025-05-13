@@ -1,0 +1,430 @@
+/* ESTILO GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-contato button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #1d0fe9;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 2s;
+}
+
+h2.titulo {
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+}
+
+h2.titulo span {
+  color: #1d0fe9;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+  box-shadow: 0px 0px 8px #1d0fe9;
+  transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO*/
+header {
+  padding: 40px 4%;
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #5c5c5c;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+header a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav li {
+  display: inline-block;
+  padding: 0 40px;
+  font-size: 25px;
+}
+
+
+
+/* ESTILO TOPO DO SITE */
+section.topo-do-site {
+  padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-do-site h1 {
+  color: #fff;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+  color: #1d0fe9;
+}
+
+.topo-do-site .txt-topo-site p {
+  color: #fff;
+  margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+/* ESTILO DAS HABILIDADES */
+section.habilidades {
+  padding: 40px 4%;
+}
+
+.habilidades .habilidades-box {
+  color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 45px;
+  transition: 0.2s;
+}
+
+.habilidades .habilidades-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffffff9e;
+}
+
+.habilidades .habilidades-box i {
+  font-size: 70px;
+  color: #1d0fe9;
+}
+
+.habilidades .habilidades-box h3 {
+  font-size: 28px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.habilidades .habilidades-box img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ESTILO SOBRE */
+section.sobre {
+  padding: 40px 4%;
+}
+
+section.sobre .flex {
+  align-items: center;
+  gap: 60px;
+}
+
+.sobre .txt-sobre {
+  color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.sobre .txt-sobre h2 span {
+  color: #1d0fe9;
+  display: block;
+}
+
+.sobre .txt-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.btn-social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1d0fe9;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 2s;
+}
+
+.img-sobre img {
+  border-radius: 15px;
+}
+
+/* ESTILO DO PROJETOS */
+section.projetos {
+  padding: 80px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.projetos .flex {
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.img-proj {
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-proj:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b8;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+/* ESTILO DO FORMULARIO DE CONTATO */
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: #242424;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
+}
+
+form textarea {
+  resize: none;
+  height: 200px;
+}
+
+form .btn-enviar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .btn-enviar input {
+  width: 120px;
+  background-color: #1d0fe9;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+  padding: 40px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+footer .line-footer {
+  padding: 20px 0;
+}
+
+.borda {
+  border-top: 2px solid #1d0fe9;
+}
+
+footer .line-footer p i {
+  color: #1d0fe9;
+  font-size: 22px;
+}
+
+footer .line-footer p a {
+  color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+  /* CLASSES GERAIS */
+  .flex {
+    flex-direction: column;
+  }
+
+  h2.titulo {
+    font-size: 34px;
+    line-height: 30px;
+  }
+
+  /* CABEÇALHO */
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  /* TOPO DO SITE */
+  section.topo-do-site .flex {
+    gap: 40px;
+  }
+
+  section.topo-do-site {
+    padding: 20px 8%;
+  }
+
+  .topo-do-site h1 {
+    font-size: 30px;
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%;
+  }
+
+  /* ESTILO DAS HABILIDADES */
+  section.habilidades {
+    padding: 40px 8%;
+  }
+
+  .habilidades .habilidades-box img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ESTILO SOBRE */
+  section.sobre {
+    padding: 80px 8%;
+  }
+  .sobre .txt-sobre h2 {
+    font-size: 34px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .btn-social {
+    text-align: center;
+  }
+  .img-sobre img {
+    width: 100%;
+  }
+
+  /* projetos */
+  section.proejtos {
+    padding: 80px 8%;
+  }
+
+  .img-proj {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  section.projetos .flex {
+    gap: 60px;
+  }
+
+  /* ESTILO DO RODPÉ */
+  footer .flex {
+    flex-direction: column;
+  }
+  footer .line-footer {
+    text-align: center;
+  }
+
+  footer .logo-footer {
+    width: 100%;
+  }
+
+  /* LOGO */
+
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* MENU MOBILIE */
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+}
